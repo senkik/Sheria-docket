@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 17% 98%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 216 65% 11%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 210 16% 93%;
+    --secondary-foreground: 216 65% 11%;
+
+    --muted: 210 16% 94%;
+    --muted-foreground: 215 16% 40%;
+
+    --accent: 46 68% 47%;
+    --accent-foreground: 216 65% 11%;
+
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 46 68% 47%;
+
+    --navy: 216 65% 11%;
+    --navy-light: 216 45% 20%;
+    --gold: 46 68% 47%;
+    --gold-dark: 46 70% 38%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 216 55% 8%;
+    --foreground: 210 20% 96%;
+
+    --card: 216 50% 11%;
+    --card-foreground: 210 20% 96%;
+
+    --popover: 216 50% 11%;
+    --popover-foreground: 210 20% 96%;
+
+    --primary: 210 20% 96%;
+    --primary-foreground: 216 55% 8%;
+
+    --secondary: 216 35% 18%;
+    --secondary-foreground: 210 20% 96%;
+
+    --muted: 216 35% 18%;
+    --muted-foreground: 215 20% 70%;
+
+    --accent: 46 68% 47%;
+    --accent-foreground: 216 55% 8%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 216 30% 22%;
+    --input: 216 30% 22%;
+    --ring: 46 68% 47%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif tracking-tight;
+  }
+}
+
+@layer components {
+  /* Long-form legal reading: generous measure and leading for dense text. */
+  .article-body {
+    @apply prose prose-slate max-w-prose prose-headings:font-serif prose-headings:text-navy prose-a:text-gold-dark prose-a:underline prose-a:decoration-gold/60 prose-strong:text-navy prose-blockquote:border-l-gold prose-blockquote:font-normal prose-blockquote:not-italic prose-li:marker:text-gold-dark dark:prose-invert;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-gold-dark;
+  }
+
+  .legal-rule {
+    @apply border-l-2 border-gold pl-4 text-sm italic text-muted-foreground;
+  }
+}
