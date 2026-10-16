@@ -22,8 +22,8 @@ port = 54324
 
 [auth]
 enabled = true
-site_url = "http://localhost:3000"
-additional_redirect_urls = ["http://localhost:3000/callback"]
+site_url = "https://sheria-docket.vercel.app"
+additional_redirect_urls = ["https://sheria-docket.vercel.app/callback"]
 jwt_expiry = 3600
 
 [auth.email]
@@ -34,7 +34,7 @@ enable_confirmations = false
 enabled = true
 client_id = "env(SUPABASE_AUTH_GOOGLE_CLIENT_ID)"
 secret = "env(SUPABASE_AUTH_GOOGLE_SECRET)"
-redirect_uri = "http://localhost:3000/callback"
+redirect_uri = "https://sheria-docket.vercel.app/callback"
 
 [storage]
 enabled = true
