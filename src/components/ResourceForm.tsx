@@ -102,6 +102,7 @@ export function ResourceForm() {
         label="Resource file"
         value={fileUrl}
         onChange={setFileUrl}
+        allowUrl={false}
         hint="Students download this from the Resource Centre."
       />
 

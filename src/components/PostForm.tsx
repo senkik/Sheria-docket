@@ -305,6 +305,7 @@ export function PostForm({ role, post, feedback }: PostFormProps) {
               id="pdf_url"
               value={form.pdf_url}
               onChange={(url) => update('pdf_url', url)}
+              allowUrl={false}
               hint="Readers download this from the published brief."
             />
           </CardContent>
@@ -333,6 +334,7 @@ export function PostForm({ role, post, feedback }: PostFormProps) {
             id="cover_image_url"
             value={form.cover_image_url}
             onChange={(url) => update('cover_image_url', url)}
+            allowUrl={false}
             hint="Shown on cards and at the top of the brief. Images stored here are optimised automatically."
           />
         </CardContent>
