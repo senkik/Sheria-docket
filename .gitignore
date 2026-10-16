@@ -21,7 +21,7 @@ next-env.d.ts
 
 # local env files
 .env
-.env*.local
+
 
 # logs
 npm-debug.log*
